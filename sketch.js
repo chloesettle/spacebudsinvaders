@@ -100,6 +100,9 @@ var data;
 var highScore1Data;
 var highScore2Data;
 var red;
+var volume = 1.0;
+var speakerOn;
+var speakerOff;
 
 
 
@@ -141,14 +144,16 @@ function preload(){
   gameOverSound = loadSound("gameOver.wav");
   //button = createButton('submit');
   emailInput = createInput('');
-  nameInput = createInput('');
+  nameInput = createInput('AAA');
   highScore1EmailInput = createInput('');
-  highScore1NameInput = createInput('');
+  highScore1NameInput = createInput('AAA');
   highScore2EmailInput = createInput('');
-  highScore2NameInput = createInput('');
+  highScore2NameInput = createInput('AAA');
   highScore1Image = loadImage("highScore1.png");
   highScore2Image = loadImage("highScore2.png");
   gameOverBack = loadImage("gameOverBack2.png");
+  speakerOn = loadImage("speakerOn.png");
+  speakerOff = loadImage("speakerOff.png");
 }
 
 function setup() {
@@ -182,6 +187,7 @@ function setup() {
   introVid.hide();
   gameState = 0;
   basePic = new Base();
+  volume = 1.0;
   //button.hide();
   emailInput.hide();
   nameInput.hide();
@@ -308,7 +314,7 @@ function startGame(){
   textSize(20);
   counter = counter + difficulty;
   //text(counter, 900, 535);
-  //text(mouseX + "," + mouseY, width/6, height-90);
+  text(mouseX + "," + mouseY, width/6, height-90);
   fill(100,255,100);
   text("Level: ", 880, 590);
   fill(255);
@@ -325,6 +331,29 @@ function startGame(){
   fill(255);
   text(highScore1, 410, 40);
   text(highScore2, 640, 40);
+
+  image(speakerOff, 750, 30, 20, 20);
+  fill(0);
+  rect(790,20,20,20);
+  image(speakerOn, 790, 30, 20, 20);
+  //fill(255);
+
+  levelUp.setVolume(volume);
+  pop.setVolume(volume);
+  laserSound.setVolume(volume);
+  alienLaser.setVolume(volume);
+  gameOverSound.setVolume(volume);
+  explosionShip.setVolume(volume);
+  smoke.setVolume(volume);
+  siren.setVolume(volume);
+
+  if (mouseIsPressed && mouseX > 740 && mouseX < 760 && mouseY > 20 && mouseY < 40){
+    volume = 0.0;
+  }
+
+  if (mouseIsPressed && mouseX > 780 && mouseX < 800 && mouseY > 20 && mouseY < 40){
+    volume = 1.0;
+  }
 
 
   if(frameCount % 8 == 0){
@@ -1139,6 +1168,8 @@ function levelIncrease() {
 
 }
 
+
+
 function highScore1page(){
   fill(0);
   rect(264,126,570,332);
@@ -1179,7 +1210,7 @@ function highScore1page(){
 
     highScore1NameInput.position(490, 382);
     highScore1EmailInput.position(490,412);
-    highScore1NameInput.attribute('maxlength', '20');
+    highScore1NameInput.attribute('maxlength', '3');
     highScore1EmailInput.attribute('maxlenght', '35');
 
     fill(255);
@@ -1287,7 +1318,7 @@ function highScore2page(){
 
     highScore2NameInput.position(490, 385);
     highScore2EmailInput.position(490,415);
-    highScore2NameInput.attribute('maxlength', '20');
+    highScore2NameInput.attribute('maxlength', '3');
     highScore2EmailInput.attribute('maxlenght', '35');
 
     fill(255);
@@ -1400,13 +1431,13 @@ function keyPressed() {
     ship.setDir(-1); //if left arrow pass argument value of -1 through the .setDir method (dir) parameter
   }
 
-  else if (keyCode === SHIFT){
-    newLife.lives = -1;
+  //else if (keyCode === SHIFT){
+   // newLife.lives = -1;
    //greenAliens.length = 0;
    //pinkAliens.length = 0;
    //blueAliens.length = 0;
    //yellowAliens.length = 0;
-  } 
+  //} 
 
   else if (key === ' ') { //if keycode equals spacebar 
     var laser = new Laser(ship.x, 510); //create new Laser obj at the current x coord (from the center) of ship and bottom of screen (?)
@@ -1418,16 +1449,16 @@ function keyPressed() {
     gameState = 3;
    }
 
-  else if (keyCode === BACKSPACE){
-    newLife.lives = 0;
-  }
+  //else if (keyCode === BACKSPACE){
+  //  newLife.lives = 0;
+  //}
 
   else if (keyCode === TAB){
-    score = 419050;
+    score = 419950;
   }
 
   else if (keyCode === ALT){
-    score = 999800;
+    score = 999900;
   }
 
 }
@@ -1517,8 +1548,6 @@ function gameOver() { //the only reason x,y are the only parameters is because t
     fill(255);
     textSize(24);
     text(score, 280, 296);
-    text(mouseX, 80, 296);
-    text(mouseY, 120, 296);
     greenAlien = new GreenAlien(450, 150, 0);
     greenAlien.show();
     greenAlien.stoned();
@@ -1644,7 +1673,7 @@ function pushHighScore1(){
   }
 
   highScore1Ref.push(highScore1Data);
-  alert('high score 1 is submitted');
+
   highScore1NameInput.hide();
   highScore1EmailInput.hide();
   gameState = 2;
@@ -1663,7 +1692,7 @@ function pushHighScore2(){
   }
 
   highScore2Ref.push(highScore2Data);
-  alert('high score 2 is submitted');
+
   highScore2NameInput.hide();
   highScore2EmailInput.hide();
   gameState = 2;
