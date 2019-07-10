@@ -1622,17 +1622,17 @@ function keyPressed() {
     laserSound.play();
   }
 
-  else if (keyCode === CONTROL){
-    newLife.lives = 0;
-  }
+  //else if (keyCode === CONTROL){
+  //  newLife.lives = 0;
+  //}
 
-  else if (keyCode === TAB){
-    score = 419950;
-  }
+  //else if (keyCode === TAB){
+    //score = 419950;
+  //}
 
-  else if (keyCode === ALT){
-    score = 999900;
-  }
+ // else if (keyCode === ALT){
+ //   score = 999900;
+  //}
 
 }
 
