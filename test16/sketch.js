@@ -1650,7 +1650,7 @@ function keyPressed() {
     gameState = 3;
   }
 
-  else if (keyCode === SHIFT){
+  /*else if (keyCode === SHIFT){
     score = 419999;
    // newLife.lives = -1;
    //greenAliens.length = 0;
@@ -1678,7 +1678,7 @@ function keyPressed() {
 
   else if (keyCode === ALT){
     score = 99999;
-  }
+  }*/
 
 }
 
