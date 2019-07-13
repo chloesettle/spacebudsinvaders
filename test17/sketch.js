@@ -234,7 +234,7 @@ function setup() {
   highScore2EmailInput.hide();
   highScore2NameInput.hide();
   resetSketch();
-  gameState = 0;
+  gameState = 1;
 }
 
 
