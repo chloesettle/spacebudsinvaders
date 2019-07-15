@@ -198,7 +198,7 @@ function preload(){
 }
 
 function setup() {
-  canvas = createCanvas(1100, 623); 
+  canvas = createCanvas(windowWidth, windowHeight); 
   canvas.parent('sketch-div'); 
   fill(0);
   rect(0,0,1200,700);
@@ -279,6 +279,10 @@ function draw() {
   }
 
 
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }
 
 
