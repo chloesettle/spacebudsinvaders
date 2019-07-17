@@ -290,7 +290,7 @@ function introVideo(){
   if (frameCount % 380 === 0) {
    introVid.pause();
    playing1 = false;
-   gameState = 1;
+   gameState = 2;
   } 
 
   else if (playing1 === true) { 
@@ -301,7 +301,7 @@ function introVideo(){
    }
 
 
-  playing1 = !playing1;
+  //playing1 = !playing1;
 
 
 }
