@@ -245,9 +245,9 @@ function draw() {
   if (gameState === 1){
    introPage();
   }
-  else if (gameState === 0){
-    introVideo();
-  }
+  //else if (gameState === 0){
+  //  introVideo();
+  //}
   else if (gameState === 2){
    startGame();
   }
