@@ -333,13 +333,13 @@ function introPage(){
 
 function mousePressed(){
    
-   if (gameState === 0 && mouseIsPressed){
+   if (gameState === 1 && mouseIsPressed){
     gameState = 2;
    }
 
-   else if (gameState === 1 && mouseIsPressed){
-    gameState = 0;
-   }
+   //else if (gameState === 1 && mouseIsPressed){
+   // gameState = 0;
+   //}
 
 
    else if(gameState === 2 && leftyMode === true && mouseIsPressed && mouseX > 645 && mouseX < 715 && mouseY > 545 && mouseY < 605 ){
