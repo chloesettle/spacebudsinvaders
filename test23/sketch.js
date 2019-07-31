@@ -1738,9 +1738,9 @@ function keyPressed() {
   //  newLife.lives = 0;
  //}
 
-  else if (keyCode === TAB){
-    score = 999999;
-  }
+ // else if (keyCode === TAB){
+ //   score = 999999;
+ // }
 
   //else if (keyCode === ALT){
   //  score = 99999;
