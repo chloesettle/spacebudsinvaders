@@ -1851,10 +1851,9 @@ function gameOver() { //the only reason x,y are the only parameters is because t
     fill(255);
     textSize(20);
     text("MKG                871220", 630, 330);
-    text("MCA                560150", 630, 330);
-    text("MCA               558320", 630, 360);
-    text("MCA               421560", 630, 390);
-    text("AAA               420001", 630, 420);
+    text("MCA                560150", 630, 360);
+    text("MCA               558320", 630, 390);
+    text("MCA               421560", 630, 420);
     text("MKG               318170", 630, 450);
     text("MKG               305480", 630, 480);
 
