@@ -45,7 +45,7 @@ var chaser;
 var levelUp;
 var explosionShip;
 var pop;
-var introVid;
+//var introVid;
 var levelUp;
 var greenPop;
 var gameOverBack;
@@ -245,9 +245,7 @@ function draw() {
   if (gameState === 1){
    introPage();
   }
-  else if (gameState === 0){
-    introVideo();
-  }
+
   else if (gameState === 2){
    startGame();
   }
@@ -287,29 +285,6 @@ function windowResized() {
 }
 
 
-function introVideo(){
-  
-  playing1 = true;
-
-  if (frameCount % 380 === 0) {
-   introVid.pause();
-   playing1 = false;
-   gameState = 1;
-  } 
-
-  else if (playing1 === true) { 
-    image(introVid, width/2, height/2, 1100, 623);
-    introVid.loop();
-    //introVid.loop();
-    gameState = 0;
-   }
-
-
-  playing1 = !playing1;
-
-
-}
-
 function introPage(){
   fill(0);
   rect(0,0, 1200, 700);
@@ -337,12 +312,8 @@ function introPage(){
 
 function mousePressed(){
    
-   if (gameState === 0 && mouseIsPressed){
+   if (gameState === 1 && mouseIsPressed){
     gameState = 2;
-   }
-
-   else if (gameState === 1 && mouseIsPressed){
-    gameState = 0;
    }
 
 
