@@ -170,7 +170,7 @@ function preload(){
   alienLaser = loadSound("alienLaser.mp3");
   lifeIcon = loadImage("lifeIcon.png");
   levelUp = loadSound("levelUp.wav");
-  introVid = createVideo("introVidR.mp4");
+ 
   gameOverSound = loadSound("gameOver.wav");
   emailInput = createInput('');
   nameInput = createInput('AAA');
@@ -226,7 +226,6 @@ function setup() {
   playing1 = false;
   leftyMode = false;
   textFont(font);
-  introVid.hide();
   basePic = new Base();
   volume = 1.0;
   emailInput.hide();
@@ -281,13 +280,12 @@ function draw() {
 }
 
 function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
+  resizeCanvas(windowWidth, windowWidth*0.56);
 }
 
 
 function introPage(){
-  fill(0);
-  rect(0,0, 1200, 700);
+  background(0);
   fill(255);
   rect(20,20,3,3); rect(323,67,3,3); rect(1100,658,3,3); rect(1168,28,3,3); rect(934,323,3,3); rect(942,158,3,3); rect(1124,570,3,3); rect(809,107,3,3); rect(634,323,3,3); rect(932,567,3,3);
   rect(1054,640,3,3); rect(69,425,3,3); rect(440,220,3,3); rect(250,180,3,3); rect(800,200,3,3); rect(1048,89,3,3); rect(756,340,3,3); rect(400,323,3,3); rect(452,17,3,3); rect(854,600,3,3);
@@ -370,8 +368,7 @@ function mousePressed(){
 
 function startGame(){
 
-  fill(0);
-  rect(0,0,1200,700);
+  background(0);
 
   fill(255);
   rect(20,20,3,3); rect(323,67,3,3); rect(1100,658,3,3); rect(1168,28,3,3); rect(934,323,3,3); rect(942,158,3,3); rect(1124,570,3,3); rect(809,107,3,3); rect(634,323,3,3); rect(932,567,3,3);
