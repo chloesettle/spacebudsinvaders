@@ -2266,7 +2266,7 @@ function YellowAlien(x, y, xdir) { //the only reason x,y are the only parameters
 
 function Ship() {
   this.x = width/2; //initializes base x value of the ship which will be in the center of the canvas
-  this.y = height - 120;
+  this.y = 480;
   this.xdir = 0; //intializes a speed for the direciton of the moving x axis 
   this.img = ship;
   //this.img2 = fire;
@@ -2296,10 +2296,10 @@ function NewLife() {
   this.show = function(lives) { //this function will actually show the object
     textSize(20);
     fill(255);
-    text(this.lives - 1, 210, height-30);
+    text(this.lives - 1, 210, 593);
     fill(100,255,100);
-    text("Lives:", 130, height-30);
-    image(this.img, 100, height-40, 30, 30);
+    text("Lives:", 130, 593);
+    image(this.img, 100, 593, 30, 30);
   }
 
   this.minusLife = function (lives) {  
