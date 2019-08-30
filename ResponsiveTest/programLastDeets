@@ -1,0 +1,20 @@
+1) -------------------------------------shrink aliens and spacing , adjust all associated algorithms (chaser size, distance formula)
+2) -------------------------------------shrink cop a little
+3) -------------------------------------shrink bases a little (check math and resize algorithm in object metho)d/properties
+5) -------------------------------------shrink ship a little 
+6) -------------------------------------add new bigger typography and four measurement units
+7) -------------------------------------game over scn text
+8) -------------------------------------intro screen text
+9)--------------------------------------raise coupon score threshold to 10,000
+12) moving star field in static pages
+13) ------------------------------------background music
+10) ------------------------------------add spacebuds invaders logo to click to begin (blinks) page
+11) ------------------------------------fix ship hit distance 
+11) coupon - input field function and keep email list/promo system
+12) hiscore melody, cop bloop, make cop ufo lights more visible
+---------------------------------------------------------------------------------------------
+15) mobile support then commands addition Look at other interfaces for left right mobile games
+15) funny golden egg
+15) countdown when level starts (in game start with counter) 
+14) fix frames for ship explosion to give sense of time (if fireFrame [] = 9 then execute next game state)
+

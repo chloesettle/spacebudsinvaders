@@ -1,0 +1,45 @@
+States: 
+
+1) Intro Animation/Page "INTRO"
+2) Game itself "GAME"
+3) Level Up "LEVEL"
+4) Level Up Reset "RESET"
+4) Hit "HIT"
+5) Game Over "LOSE"
+6) Win Game "WIN"
+7) Score Entry "SCORE" // last one
+
+in function Setup(){
+	gameState == "INTRO";
+}
+
+In function Draw() {
+	if (gameState == "INTRO"){ // for now click to begin, simple
+	 introPage();
+	}
+
+	else if (gameState == "GAME"){
+	 startGame(); // the whole game
+	}
+
+	else if (gameState == "LEVEL"){
+     levelUp(); // basic title page with "Level + Level variable" what we want to happen right before the sketch resets and congratulations gesture with pot leaves raining down
+	}
+
+	else if (gameState == "RESET"){ 
+     resetSketch(); // already have
+	}
+
+	else if (gameState == "HIT"){
+	 lifeLost(); //will have fire and explosion, need to figure out how to get back to game after hit i.e. if (set a set time for a break with the timer)
+	}
+
+	else if (gameState == "LOSE"){
+     gameOver(); // put gameOver object here and fix everywhere it was called to call this function instead
+	}
+
+	else if (gameState == "SCORE"){
+	 enterScore(); // basic screen that shows final score now --> record, show customer, if score threshold < 10,000 release 5% off Coupon, if > 10,000 10%
+	}
+}
+
