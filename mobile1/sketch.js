@@ -200,9 +200,8 @@ function preload(){
 }
 
 function setup() {
-  canvas = createCanvas(windowWidth, windowHeight);  
-  fill(0);
-  rect(0,0,1200,700);
+  canvas = createCanvas(windowWidth-10, windowWidth*0.56);  
+  background(0);
   frameRate(20);
   imageMode(CENTER);
 
@@ -280,7 +279,7 @@ function draw() {
 }
 
 function windowResized() {
-  resizeCanvas(windowWidth, windowWidth*0.56);
+  resizeCanvas(windowWidth-10, windowWidth*0.56);
 }
 
 
