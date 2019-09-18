@@ -15,53 +15,28 @@
     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
     <script type="text/javascript" src="firebase.js"></script>
-    
+      <script>
+  function resize(){    
+    $("#canvas").outerHeight($(window).height()-$("#canvas").offset().top- Math.abs($("#canvas").outerHeight(true) - $("#canvas").outerHeight()));
+  }
+  $(document).ready(function(){
+    resize();
+    $(window).on("resize", function(){                      
+        resize();
+    });
+  });
+  </script>
 
 </head>
 
 
 
-
-<body>
-</body>
-
 <style>
 
-
-html, body {
-  height: 95%;
-}
-header{
-	  position: absolute;
-    left: 50px;
-	  top: 0px;
-    width: 200px;
-    height: 200px;
-    font-size: 10px;
-}
-p{
-font-size: 10px;
-}
-body {
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  background-color: black;
-}
-a{
-  color: silver;
-}
-
-.noselect {
-  -webkit-touch-callout: none; 
-    -webkit-user-select: none; 
-     -khtml-user-select: none; 
-       -moz-user-select: none; 
-        -ms-user-select: none; 
-            user-select: none; 
-}
+#defaultCanvas0{
+  border: solid 1px blue;  
+  width: 100%;
+	}
 
  @import url('https://fonts.googleapis.com/css?family=VT323&display=swap');
 
