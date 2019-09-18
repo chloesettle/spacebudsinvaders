@@ -1836,8 +1836,8 @@ function gameOver() { //the only reason x,y are the only parameters is because t
     currentCopFrame = (currentCopFrame+1) % numCopFrames;
   }
 
-    nameInput.position(280, 331);
-    emailInput.position(280,382);
+    nameInput.position(280, 341);
+    emailInput.position(280,392);
     fill(255,0,0);
     textSize(12);
     text("*EMAILS RECEIVE GAMEPLAY DEALS & MORE", 183, 440);
