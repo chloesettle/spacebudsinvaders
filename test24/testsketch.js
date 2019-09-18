@@ -199,7 +199,7 @@ function preload(){
 }
 
 function setup() {
-  canvas = createCanvas();  
+  canvas = createCanvas(windowWidth, windowHeight);  
   fill(0);
   rect(0,0,1200,700);
   frameRate(20);
