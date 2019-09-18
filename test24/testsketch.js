@@ -170,7 +170,6 @@ function preload(){
   alienLaser = loadSound("alienLaser.mp3");
   lifeIcon = loadImage("lifeIcon.png");
   levelUp = loadSound("levelUp.wav");
-  introVid = createVideo("introVidR.mp4");
   gameOverSound = loadSound("gameOver.wav");
   emailInput = createInput('');
   nameInput = createInput('AAA');
@@ -226,7 +225,6 @@ function setup() {
   playing1 = false;
   leftyMode = false;
   textFont(font);
-  introVid.hide();
   basePic = new Base();
   volume = 1.0;
   emailInput.hide();
@@ -245,9 +243,7 @@ function draw() {
   if (gameState === 1){
    introPage();
   }
-  //else if (gameState === 0){
-  //  introVideo();
-  //}
+
   else if (gameState === 2){
    startGame();
   }
@@ -283,28 +279,7 @@ function draw() {
 }
 
 
-function introVideo(){
-  
-  playing1 = true;
 
-  if (frameCount % 380 === 0) {
-   introVid.pause();
-   playing1 = false;
-   gameState = 2;
-  } 
-
-  else if (playing1 === true) { 
-    image(introVid, width/2, height/2, 1100, 623);
-    introVid.loop();
-    //introVid.loop();
-    gameState = 0;
-   }
-
-
-  //playing1 = !playing1;
-
-
-}
 
 function introPage(){
   fill(0);
