@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>P5.js Example</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.14/p5.js"></script>
+		<script>
+			function setup(){
+				var canvas = createCanvas(1100, 623);
+        canvas.parent('sketch-div');
+        background(32);
+			}
+			
+			function draw(){
+				fill(255);
+				ellipse(mouseX, mouseY, 25, 25);
+			}
+		</script>
+
+    <style>
+      body{
+        background-color: #00aaff;
+        text-align:center;
+      }
+      
+      h1{
+        background-color: #ffffff;
+      }
+      
+      p{
+        font-size: 18px;
+      }
+      
+      canvas{
+        border: thin solid red;
+        width: 100% !important;
+        height: auto !important;
+      }
+    </style>
+	</head>
+	<body>
+    <h1>Circles Sketch</h1>
+    <div id="sketch-div"></div>
+    <p>Move your mouse around to see circles.</h1>
+	</body>
+</html>
