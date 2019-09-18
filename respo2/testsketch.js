@@ -199,7 +199,7 @@ function preload(){
 }
 
 function setup() {
-  var canvas = createCanvas(1100, 600);
+  var canvas = createCanvas(1100, 623);
   canvas.parent('sketch-div');  
   background(0);
   frameRate(20);
