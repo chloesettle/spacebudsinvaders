@@ -5,32 +5,20 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.14/p5.js"></script>
 		<script>
 			function setup(){
-				var canvas = createCanvas(1100, 623);
-        canvas.parent('sketch-div');
-        background(32);
+			 var canvas = createCanvas(1100, 623);
+			  canvas.parent('sketch-div');
+			  background(0);
 			}
 			
 			function draw(){
-				fill(255);
-				ellipse(mouseX, mouseY, 25, 25);
+			  fill(255);
+			  ellipse(mouseX, mouseY, 25, 25);
 			}
 		</script>
 
-    <style>
-      body{
-        background-color: #00aaff;
-        text-align:center;
-      }
+    <style> 
       
-      h1{
-        background-color: #ffffff;
-      }
-      
-      p{
-        font-size: 18px;
-      }
-      
-      canvas{
+      canvas {
         border: thin solid red;
         width: 100% !important;
         height: auto !important;
