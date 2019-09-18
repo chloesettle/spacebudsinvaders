@@ -179,7 +179,7 @@ function preload(){
   highScore2NameInput = createInput('AAA');
   highScore1Image = loadImage("highScore1.png");
   highScore2Image = loadImage("highScore2.png");
-  gameOverBack = loadImage("gameOverBack2.png");
+  gameOverBack = loadImage("gameOverBackNew.png");
   speakerOn = loadImage("speakerOn.png");
   speakerOff = loadImage("speakerOff.png");
   pauseButton = loadImage("pauseButton.png");
