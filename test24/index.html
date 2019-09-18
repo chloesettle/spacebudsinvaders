@@ -16,6 +16,10 @@
     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
     <script type="text/javascript" src="firebase.js"></script>
       <script>
+    var element = document.getElementById('defaultCanvas0');
+    element.style.width = null;
+    element.style.height = null;      
+	      
   function resize(){    
     $("#canvas").outerHeight($(window).height()-$("#canvas").offset().top- Math.abs($("#canvas").outerHeight(true) - $("#canvas").outerHeight()));
   }
