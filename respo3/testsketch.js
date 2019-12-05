@@ -297,7 +297,7 @@ function introPage(){
   }
 
   image(sbLogo, 550, 200, 375, 100);
-  text("Click to Begin", 480, 320);
+  text("Click to Play & Save", 450, 320);
   image(potImages[(currentPotFrame) % numPotFrames], 540, 400, 75, 75);
 
 
