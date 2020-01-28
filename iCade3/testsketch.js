@@ -427,7 +427,7 @@ function startGame(){
   textSize(30);
   counter = counter + difficulty;
   //text(counter, 900, 535);
-  text(mouseX + "," + mouseY, width/6, height-90);
+  //text(mouseX + "," + mouseY, width/6, height-90);
   fill(100,255,100);
   text("LEVEL: ", 880, height-40);
   fill(255);
