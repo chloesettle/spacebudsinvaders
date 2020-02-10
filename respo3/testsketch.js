@@ -126,7 +126,7 @@ var highScoreGold;
 var highScoreSound;
 var sbLogo2;
 
-leftButton
+
 function preload(){
 
   ship = loadImage('ship.png');
