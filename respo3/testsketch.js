@@ -1812,12 +1812,13 @@ function gameOver() { //the only reason x,y are the only parameters is because t
     cop.show();
     fill(255);
     textSize(20);
+
     text("MKG                871220", 630, 330);
-    text("MCA                560150", 630, 360);
-    text("MCA               558320", 630, 390);
-    text("MCA               421560", 630, 420);
-    text("MKG               318170", 630, 450);
-    text("MKG               305480", 630, 480);
+    text("COL                567440", 630, 360);
+    text("MCA                560150", 630, 390);
+    text("MCA               558320", 630, 420);
+    text("COL                526010", 630, 450);
+    text("MCA               425920", 630, 470);
 
 
   if(frameCount % 8 == 0){
