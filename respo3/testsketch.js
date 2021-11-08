@@ -1813,12 +1813,12 @@ function gameOver() { //the only reason x,y are the only parameters is because t
     fill(255);
     textSize(20);
 
-    text("WPC               1,010,540", 630, 330);
-    text("COL                871,220", 630, 360);
-    text("JTG                766,260", 630, 390);
-    text("POO                587,880", 630, 420);
-    text("MCA               567,440", 630, 450);
-    text("COL                560,150", 630, 480);
+    text(" DW               1,100,000", 630, 330);
+    text("WPC                1,010,540", 630, 360);
+    text("COL                871,220", 630, 390);
+    text("JTG                766,260", 630, 420);
+    text("POO               587,880", 630, 450);
+    text("MCA                567,440", 630, 480);
 
 
   if(frameCount % 8 == 0){
